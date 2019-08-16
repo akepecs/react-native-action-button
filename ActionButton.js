@@ -209,6 +209,7 @@ export default class ActionButton extends Component {
           }}
           onPressIn={this.props.onPressIn}
           onPressOut={this.props.onPressOut}
+          hitSlop={{top: 20, bottom: 20, left: 50, right: 50}}
         >
           <Animated.View
             style={wrapperStyle}
@@ -328,7 +329,7 @@ export default class ActionButton extends Component {
 
     setTimeout(
       () => this.setState({ active: false, resetToken: this.state.resetToken }),
-      250
+      0
     );
   }
 }
